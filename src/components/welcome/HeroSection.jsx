@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
@@ -13,7 +14,7 @@ export default function HeroSection() {
         />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
       </div>
-
+      
       <div className="relative z-10 pt-12"></div>
 
       <div className="relative z-10 max-w-xl mx-auto text-center my-auto space-y-6">

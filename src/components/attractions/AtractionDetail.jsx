@@ -16,7 +16,7 @@ export default function AtractionDetail() {
         <h2 className="font-serif text-2xl font-bold text-stone-900 mb-2">Património não encontrado</h2>
         <p className="text-stone-600 mb-6">O atrativo que procura não existe ou foi removido.</p>
         <button 
-          onClick={() => navigate('/atractions')}
+          onClick={() => navigate('/atracoes')}
           className="bg-emerald-800 text-white px-6 py-2.5 rounded-full font-medium text-sm"
         >
           Ver todos os atrativos
@@ -27,8 +27,7 @@ export default function AtractionDetail() {
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] pb-20">
-      
-      {/* Hero com Imagem de Fundo */}
+
       <div className="relative h-[450px] w-full">
         <img 
           src={attraction.image} 
@@ -37,7 +36,6 @@ export default function AtractionDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40"></div>
         
-        {/* Botão Voltar */}
         <div className="absolute top-28 left-6 sm:left-12">
           <button 
             onClick={() => navigate(-1)}
@@ -48,7 +46,6 @@ export default function AtractionDetail() {
           </button>
         </div>
 
-        {/* Título e Localização */}
         <div className="absolute bottom-8 left-6 right-6 sm:left-12 max-w-4xl">
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white mb-3 drop-shadow-md">
             {attraction.title}
@@ -60,7 +57,6 @@ export default function AtractionDetail() {
         </div>
       </div>
 
-      {/* Conteúdo Principal */}
       <div className="max-w-4xl mx-auto px-6 mt-8 space-y-8">
         
         <div className="flex items-center">
@@ -70,7 +66,6 @@ export default function AtractionDetail() {
           </span>
         </div>
 
-        {/* Card de Melhor Época */}
         <div className="bg-[#F5EFEB] border border-stone-200/60 p-6 rounded-2xl shadow-sm">
           <div className="flex items-start space-x-3">
             <Calendar className="w-5 h-5 text-emerald-800 mt-0.5 flex-shrink-0" />
@@ -81,12 +76,10 @@ export default function AtractionDetail() {
           </div>
         </div>
 
-        {/* Descrição Longa */}
         <div className="prose prose-stone max-w-none text-stone-700 text-base sm:text-lg leading-relaxed">
           <p>{attraction.fullDescription}</p>
         </div>
 
-        {/* Destaques */}
         {attraction.highlights && attraction.highlights.length > 0 && (
           <div className="bg-[#F5EFEB] p-6 sm:p-8 rounded-2xl border border-stone-200/60 space-y-4">
             <h3 className="font-serif text-xl font-bold text-stone-900">Destaques</h3>
@@ -101,7 +94,6 @@ export default function AtractionDetail() {
           </div>
         )}
 
-        {/* Informações para Visitantes */}
         {attraction.visitorInfo && (
           <div className="bg-[#F5EFEB] p-6 sm:p-8 rounded-2xl border border-stone-200/60 space-y-3">
             <h3 className="font-serif text-xl font-bold text-stone-900">Informações para visitantes</h3>
@@ -111,7 +103,6 @@ export default function AtractionDetail() {
           </div>
         )}
 
-        {/* Banner de Guia Local */}
         <div className="bg-emerald-800 text-white rounded-2xl p-8 sm:p-10 text-center space-y-4 shadow-md">
           <h3 className="font-serif text-2xl sm:text-3xl font-bold">Quer visitar com um guia local?</h3>
           <p className="text-emerald-100 max-w-xl mx-auto text-sm sm:text-base">

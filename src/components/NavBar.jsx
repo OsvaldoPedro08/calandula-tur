@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { Menu, X, Compass } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation(); //obtem a localização atual do item clicado do menu
+  const navigate = useNavigate();
 
   const menuItems = [
     { name: 'Início', path: '/' },
     { name: 'Atrativos', path: '/atracoes' },
-    { name: 'Negócios', path: '' },
+    { name: 'Negócios', path: '/negocios' },
     { name: 'Guias', path: '' },
     { name: 'Parceiros', path: '' },
   ];
@@ -21,7 +22,10 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent w-full">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        <div className="flex items-center space-x-2.5">
+        <div 
+          className="flex items-center space-x-2.5"
+          onClick={() => navigate('/')}
+        >
           <div className="bg-emerald-700 text-white p-2 rounded-xl shadow-sm flex items-center justify-center">
             <Compass className="w-5 h-5" />
           </div>

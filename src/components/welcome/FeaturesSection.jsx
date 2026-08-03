@@ -1,5 +1,6 @@
 import React from 'react';
 import { Leaf, Users, Handshake } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function FeaturesSection() {
   const items = [
@@ -27,6 +28,11 @@ export default function FeaturesSection() {
 
   return (
     <section className="relative z-20 -mt-10 px-4 sm:px-6 max-w-2xl mx-auto pb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
       <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-10 space-y-8 border border-slate-100">
         {items.map((item, index) => {
           const IconComponent = item.icon;
@@ -41,6 +47,7 @@ export default function FeaturesSection() {
           );
         })}
       </div>
+      </motion.div>
     </section>
   );
 }

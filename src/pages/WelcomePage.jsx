@@ -4,6 +4,8 @@ import HeroSection from '../components/welcome/HeroSection';
 import FeaturesSection from '../components/welcome/FeaturesSection';
 import AtractionSection from '../components/welcome/AtractionSection';
 import Footer from '../components/Footer';
+import AboutSection from '../components/welcome/AboutSection';
+import LocalBusinessSection from '../components/welcome/LocalBusinessSection';
 
 export default function Welcome() {
   return (
@@ -15,6 +17,8 @@ export default function Welcome() {
         <HeroSection />
         <FeaturesSection />
         <AtractionSection />
+        <AboutSection />
+        <LocalBusinessSection />
       </main>
 
       <Footer />
